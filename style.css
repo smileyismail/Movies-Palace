@@ -1,0 +1,193 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* header start */
+header {
+  background-color: #141e30;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.input_control input {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid #6882a0;
+  border-radius: 10px;
+  margin: 0 1rem;
+  color: whitesmoke;
+  font-size: 1.6rem;
+  width: 300px;
+  outline: none;
+}
+
+.input_control input::placeholder {
+  color: #6882a0;
+}
+
+.input_control input:focus {
+  background-color: #243b55;
+}
+
+.action_control button {
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+
+.action_control button:active {
+  transform: scale(0.9);
+}
+/* header end */
+
+/* main start */
+main {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 27rem;
+  height: 40rem;
+  margin: 1.6rem;
+  background-color: #6882a0;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.movie img {
+  width: 100%;
+  height: 85%;
+}
+
+.movie .info {
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.7rem;
+  padding: 1.5rem 1rem;
+}
+
+.movie .info h3 {
+  margin-top: -1.5rem;
+}
+
+.movie .info span {
+  background-color: #141e30;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie .info span.green {
+  color: rgb(0, 220, 0);
+}
+.movie .info span.orange {
+  color: rgb(255, 180, 40);
+}
+.movie .info span.red {
+  color: rgb(255, 66, 66);
+}
+
+.overview {
+  background-color: rgba(0, 0, 0, 0.84);
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+  max-height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(101%);
+  transition: transform 0.2s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0%);
+}
+
+.overview h3 {
+  font-size: 2.4rem;
+  text-decoration: underline;
+  padding: 0 0 1rem 0;
+}
+
+.overview p {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  line-height: 2.1rem;
+}
+
+/* main end */
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .input_control input {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    margin: 0rem;
+  }
+}
